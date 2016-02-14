@@ -162,6 +162,7 @@ def equilateral_to_unit(equi):
     return EQUILATERAL_TO_UNIT_MAP[len(equi)](equi)
 
 UNIT_VERTICES = {
+        0: np.empty((0, 0), dtype=np.float64),
         1: np.array([
             [-1],
             [1],
@@ -238,7 +239,7 @@ def pick_random_simplex_unit_coordinate(rng, dims):
 
 # {{{ accept_scalar_or_vector decorator
 
-class accept_scalar_or_vector:
+class accept_scalar_or_vector:  # noqa
     def __init__(self, arg_nr, expected_rank):
         """
         :arg arg_nr: The argument number which may be a scalar or a vector,
@@ -492,8 +493,6 @@ def estimate_lebesgue_constant(n, nodes, visualize=False):
     return lebesgue_constant
 
 # }}}
-
-
 
 
 # vim: foldmethod=marker

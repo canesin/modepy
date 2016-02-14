@@ -38,7 +38,13 @@ point interpolants:
 
 where :math:`(\phi_i)_i` is the basis of functions underlying :math:`V`.
 
+.. autofunction:: inverse_mass_matrix
+
 .. autofunction:: mass_matrix
+
+.. autofunction:: modal_face_mass_matrix
+
+.. autofunction:: nodal_face_mass_matrix
 
 Differentiation is also convenient to express by using :math:`V^{-1}` to
 obtain modal values and then using a Vandermonde matrix for the derivatives
